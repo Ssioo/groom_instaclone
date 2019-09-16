@@ -47,6 +47,10 @@
     height: 22px;
 }
 
+.icon_heart.on{
+    background: url("../imgs/background01.png") no-repeat -26px -261px;
+}
+
 .icon_heart_small {
     display: inline-block;
     background: url('../imgs/background01.png') no-repeat -323px -274px;
@@ -54,21 +58,12 @@
     height: 11px;
 }
 
-.icon_heart_small_full {
-    display: inline-block;
-    background: url('../imgs/background01.png') no-repeat -323px -287px;
-    width: 12px;
-    height: 11px;
-}
-
-
 .icon_comments {
     display: inline-block;
     background: url('../imgs/background01.png') no-repeat -239px -202px;
     width: 24px;
     height: 24px;
 }
-
 
 .icon_send_direct_message {
     display: inline-block;
@@ -91,11 +86,8 @@
     height: 24px;
 }
 
-.icon_scrap_full {
-    display: inline-block;
+.icon_scrap.on {
     background: url('../imgs/background01.png') no-repeat -159px -286px;
-    width: 19px;
-    height: 24px;
 }
 
 
@@ -281,9 +273,7 @@ body {
     padding: 10px 20px;
 }
 
-.heart_btn.on .icon_heart{
-    background: url("../imgs/background01.png") no-repeat -26px -261px;
-}
+
 
 .contents .bottom_icons .left_icons{
     display: flex;
