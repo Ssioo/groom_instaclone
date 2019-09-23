@@ -302,7 +302,12 @@ body {
 
 .contents .comment_container .comment{
     display: flex;
+    flex-direction: column;
     font-size: 14px;
+}
+
+.contents .comment_container .comment .comment-detail{
+    display: flex;
 }
 
 .contents .comment_container .comment .nick_name{
@@ -343,7 +348,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    pointer-events: none;
+    /*pointer-events: none;*/
     opacity: 0.6;
 }
 
