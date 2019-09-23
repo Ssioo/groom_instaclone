@@ -23,6 +23,9 @@ window.addEventListener('resize', function () {
 });
 
 window.addEventListener('scroll', function () {
+    let scrollHeight = pageYOffset + window.innerHeight;
+    let documentHeight = document.body.scrollHeight;
+
     if (pageYOffset >= 10){
         header.classList.add('on');
         if (sidebox) {
@@ -36,6 +39,33 @@ window.addEventListener('scroll', function () {
             sidebox.classList.remove('on');
             sidebox.removeAttribute('style');
         }
+
+    }
+
+    if (scrollHeight >= documentHeight) {
+
+        let page = document.querySelector('#page').value;
+        if (page >= 10) {
+            return;
+        }
+        document.querySelector('#page').value = parseInt(page) + 1;
+
+        $.ajax({
+            type: 'POST',
+            url: './post.html',
+            data: {
+                'page': page
+            },
+            dataType: 'html',
+            success: function (data) {
+                delegation.insertAdjacentHTML('beforeend', data);
+            },
+            error: function (request, status, error) {
+                alert('로그인이 필요합니다.');
+                window.location.replace('https://www.naver.com');
+            }
+        })
+
 
     }
 });
