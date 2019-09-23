@@ -118,6 +118,25 @@ if (delegation) {
 
         } else if (elem.matches('[data-name="comment_delete"]')) {
 
+            $.ajax({
+                type: 'POST',
+                url: 'data/delete.json',
+                data: {
+                    'pk' : 37
+                },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status) {
+                        let comt = document.querySelector('.comment-detail');
+                        comt.remove();
+                    }
+                },
+                error: function (request, status, error) {
+                    alert('문제가 발생했습니다.');
+
+                }
+            });
+
         } else if (elem.matches('')) {
 
         }
