@@ -255,7 +255,31 @@ body {
 }
 
 .contents .top .icon_more{
-    transform: translateY(50%);
+    position: relative;
+    /*transform: translateY(50%);*/
+}
+.contents .top .icon_more.on .toggle_box{
+    display: block;
+}
+
+.contents .toggle_box{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    display: none;
+}
+
+.contents .toggle_box > li {
+    padding: 5px 10px;
+    background: white;
+}
+
+.contents .toggle_box > li input {
+    border: none;
+    font-size: inherit;
 }
 
 .contents .img_section{
